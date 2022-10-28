@@ -7,8 +7,7 @@ FOLDER_NAME=$@
 echo "Cloning starter..."
 echo ""
 
-FOLDER_NAME:=express-api-starter
-git clone https://github.com/w3dg/express-api-starter.git $FOLDER_NAME &> /dev/null
+git clone https://github.com/w3dg/express-api-starter.git ${FOLDER_NAME:=express-api-starter} &> /dev/null
 rm -rf "$FOLDER_NAME/.git/"
 cd $FOLDER_NAME
 
@@ -27,3 +26,4 @@ cd ..
 echo "Run the following to get started"
 echo "cd $FOLDER_NAME"
 echo "npm run dev OR yarn run dev (depending on the package manager)"
+
